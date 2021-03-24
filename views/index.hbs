@@ -1,0 +1,5 @@
+<section class="home-hero">
+    <h1>{{ message}} </h1>
+    <moviethumb v-for="item in allMovies" :movie="item" :key="item.movies_id"></moviethumb>
+</section>
+
