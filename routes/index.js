@@ -11,6 +11,14 @@ router.use('/api', createProxyMiddleware({
     changeOrigin: true 
 }))
 
+router.use('/ums', createProxyMiddleware({
+    target: 'http://localhost5050',
+    headers: {
+        accept: 'application/json, application/x-www-form-urlencoded'
+    },
+    changeOrigin: true 
+}))
+
 router.get('/', (req, res) => {
     res.render('index', { message: "Hello"});
 })
